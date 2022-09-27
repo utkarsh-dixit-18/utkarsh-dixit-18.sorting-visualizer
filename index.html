@@ -1,0 +1,60 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sorting Visualization</title>
+    <link rel="stylesheet" type="text/css" href="style/index.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>Sorting Visualizer</h1>
+      <div class="vars">
+        <div class="range">
+          <div class="slide">
+            <label for="bars">ِArray Size</label> :
+            <input
+              id="bars"
+              type="number"
+              name="bars"
+              min="1"
+              max="100"
+              value="50"
+              oninput="setup()"
+              onchange="setup()"
+            />
+            <span id="b"> </span>
+          </div>
+          <div class="slide">
+            <label for="delay">Speed</label> :
+            <input
+              id="delay"
+              type="range"
+              name="delay"
+              min="0"
+              max="1000"
+              value="25"
+              oninput="setup()"
+              onchange="setup()"
+            />
+            <span id="d"></span>
+          </div>
+        </div>
+        <select class="sorts">
+          <option disabled selected>select sort</option>
+          <option value="1">Selection Sort</option>
+          <option value="2">Bubble Sort</option>
+          <option value="3">Insertion Sort</option>
+          <option value="4">Merge Sort</option>
+          <option value="5">Quick Sort</option>
+          <option value="6">Heap Sort</option>
+        </select>
+        <button onclick="startSort()">Start</button>
+        <button onclick="reset()">Generate New Array</button>
+      </div>
+    </div>
+    <div id="container"></div>
+    <script src="App/script.js"></script>
+  </body>
+</html>
